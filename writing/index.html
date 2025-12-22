@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="site-base" content="../" />
+  <title>Writing · Your Name</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="rail">
+      <p class="rail__name"><a href="{{base}}">Your Name</a></p>
+      <p class="rail__tagline">builder · notes · projects</p>
+
+      <div class="rail__links">
+        <a href="mailto:you@example.com">Email</a>
+        <a href="https://github.com/yourname" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourname/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="rail__block rail__nav">
+        <a href="{{base}}projects/">Projects</a>
+        <a href="{{base}}writing/">Writing</a>
+        <a href="{{base}}vlogs/">Vlogs</a>
+        <a href="{{base}}about/">About</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1>Writing</h1>
+      <p class="muted">Posts are Markdown files. Edit <code>/content/writing/*.md</code>.</p>
+      <ul id="writing-list" class="list"></ul>
+    </main>
+  </div>
+
+  <script type="module">
+    import { applyBasePlaceholders, loadIndexIntoList } from "../assets/site.js";
+    applyBasePlaceholders();
+    loadIndexIntoList("../content/writing/index.json", "writing-list", "./post.html");
+  </script>
+</body>
+</html>

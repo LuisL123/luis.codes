@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="site-base" content="../" />
+  <title>Post · Your Name</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="rail">
+      <p class="rail__name"><a href="{{base}}">Your Name</a></p>
+      <p class="rail__tagline">builder · notes · projects</p>
+
+      <div class="rail__links">
+        <a href="mailto:you@example.com">Email</a>
+        <a href="https://github.com/yourname" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourname/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="rail__block rail__nav">
+        <a href="{{base}}projects/">Projects</a>
+        <a href="{{base}}writing/">Writing</a>
+        <a href="{{base}}vlogs/">Vlogs</a>
+        <a href="{{base}}about/">About</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1 id="post-title">Loading…</h1>
+      <p id="post-meta" class="muted"></p>
+      <hr class="hr" />
+      <article id="post-body"></article>
+      <hr class="hr" />
+      <p><a href="./">← Back to Writing</a></p>
+    </main>
+  </div>
+
+  <script type="module">
+    import { applyBasePlaceholders, injectPostFromIndex } from "../assets/site.js";
+    applyBasePlaceholders();
+    injectPostFromIndex(
+      "../content/writing/index.json",
+      "../content/writing/",
+      "post-body",
+      "post-title",
+      "post-meta"
+    );
+  </script>
+</body>
+</html>
