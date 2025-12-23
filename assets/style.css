@@ -113,7 +113,7 @@ p{ margin: 10px 0; }
 
 .list{
   margin: 12px 0 0;
-  padding: 0;
+  padding-left: 10px;
   list-style: none;
   display: grid;
   gap: 10px;
