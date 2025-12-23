@@ -57,6 +57,17 @@ a:hover{ opacity: .85; }
   letter-spacing: -0.01em;
   margin: 0 0 6px;
 }
+.rail__photo-link{
+  display: inline-block;
+  margin: 0 0 10px;
+}
+.rail__photo{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
 
 .rail__tagline{
   margin: 0 0 14px;
